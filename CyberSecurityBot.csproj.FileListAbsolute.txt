@@ -1,0 +1,5 @@
+C:\Users\azwin\Downloads\CyberSecurityBot_Fixed\obj\Debug\net6.0\CyberSecurityBot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azwin\Downloads\CyberSecurityBot_Fixed\obj\Debug\net6.0\CyberSecurityBot.AssemblyInfoInputs.cache
+C:\Users\azwin\Downloads\CyberSecurityBot_Fixed\obj\Debug\net6.0\CyberSecurityBot.AssemblyInfo.cs
+C:\Users\azwin\Downloads\CyberSecurityBot_Fixed\obj\Debug\net6.0\CyberSecurityBot.csproj.CoreCompileInputs.cache
+C:\Users\azwin\Downloads\CyberSecurityBot_Fixed\obj\Debug\net6.0\CyberSecurityBot.csproj.AssemblyReference.cache
