@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cyber Security Awareness Bot
 
 ## Overview
@@ -27,3 +28,6 @@ The chatbot helps users learn about:
 
 ## Developer
 Created by Vharavha Azwinndini
+=======
+# chat-bot-cybersecurity
+>>>>>>> a4b6bca4c01d440131b4c0a66f8dc7259a65f32a
