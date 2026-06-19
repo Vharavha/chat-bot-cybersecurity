@@ -7,25 +7,6 @@ namespace CyberSecurityBot
         public static void DisplayBanner()
         {
             Console.Clear();
-
-<<<<<<< HEAD
-            Console.ForegroundColor = ConsoleColor.Cyan;
-
-            Console.WriteLine("=================================================");
-            Console.WriteLine("         CYBER SECURITY AWARENESS BOT");
-            Console.WriteLine("=================================================");
-
-            Console.ResetColor();
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Stay Safe • Stay Smart");
-            Console.ResetColor();
-
-            Console.WriteLine();
-        }
-    }
-}
-=======
             // Top spacing
             Console.WriteLine("\n\n");
 
@@ -61,4 +42,3 @@ namespace CyberSecurityBot
         }
     }
 }
->>>>>>> a4b6bca4c01d440131b4c0a66f8dc7259a65f32a

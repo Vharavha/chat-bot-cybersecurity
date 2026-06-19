@@ -1,5 +1,4 @@
 using System;
-<<<<<<< HEAD
 using System.Collections.Generic;
 
 namespace CyberSecurityBot
@@ -67,19 +66,22 @@ namespace CyberSecurityBot
 
             input = input.ToLower();
 
-            // Greetings
             if (input.Contains("hello") || input.Contains("hi"))
             {
                 return "Hello! How can I help you stay safe online today?";
             }
 
-            // Help Command
             if (input.Contains("help"))
             {
                 return "You can ask me about passwords, phishing, scams, or privacy.";
             }
 
-            // Memory Feature - Name
+            if (input.Contains("activity log") ||
+                input.Contains("what have you done for me"))
+            {
+                return "Click the Activity Log button to view recent actions.";
+            }
+
             if (input.Contains("my name is"))
             {
                 userName = input.Replace("my name is", "").Trim();
@@ -87,7 +89,6 @@ namespace CyberSecurityBot
                 return $"Nice to meet you, {userName}!";
             }
 
-            // Memory Feature - Favourite Topic
             if (input.Contains("i like"))
             {
                 favouriteTopic = input.Replace("i like", "").Trim();
@@ -95,7 +96,6 @@ namespace CyberSecurityBot
                 return $"Great! I'll remember that you're interested in {favouriteTopic}.";
             }
 
-            // Sentiment Detection
             if (input.Contains("worried"))
             {
                 return "It's understandable to feel worried about cybersecurity threats. Let me share some tips to help you stay safe online.";
@@ -111,7 +111,6 @@ namespace CyberSecurityBot
                 return "Curiosity is excellent in cybersecurity. The more you learn, the safer you become online.";
             }
 
-            // Follow-up Conversation
             if (input.Contains("tell me more") ||
                 input.Contains("another tip") ||
                 input.Contains("explain more"))
@@ -120,13 +119,10 @@ namespace CyberSecurityBot
                 {
                     return GetRandomResponse(lastTopic);
                 }
-                else
-                {
-                    return "Please ask about a cybersecurity topic first.";
-                }
+
+                return "Please ask about a cybersecurity topic first.";
             }
 
-            // Keyword Recognition
             foreach (var keyword in keywordResponses.Keys)
             {
                 if (input.Contains(keyword))
@@ -135,13 +131,11 @@ namespace CyberSecurityBot
 
                     string response = GetRandomResponse(keyword);
 
-                    // Personalised Memory Response
                     if (favouriteTopic == keyword)
                     {
                         response += $" Since you're interested in {keyword}, you should continue learning advanced protection tips.";
                     }
 
-                    // Personalised Name Response
                     if (!string.IsNullOrEmpty(userName))
                     {
                         response = userName + ", " + response;
@@ -151,7 +145,6 @@ namespace CyberSecurityBot
                 }
             }
 
-            // Default Response
             return "I'm not sure I understand. Can you try rephrasing?";
         }
 
@@ -167,67 +160,3 @@ namespace CyberSecurityBot
         }
     }
 }
-=======
-
-namespace CyberSecurityBot
-{
-    public static class ChatBot
-    {
-        public static void Start()
-        {
-            Console.WriteLine("Type a command (type 'help' to see options):");
-
-            while (true)
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("> ");
-                Console.ResetColor();
-
-                string input = Console.ReadLine()?.ToLower() ?? string.Empty;
-
-                switch (input)
-                {
-                    case "help":
-                        ShowHelp();
-                        break;
-
-                    case "password":
-                        Console.WriteLine("Use strong passwords with numbers, symbols, and uppercase letters.");
-                        break;
-
-                    case "phishing":
-                        Console.WriteLine("Do not click suspicious links. Always verify the sender.");
-                        break;
-
-                    case "malware":
-                        Console.WriteLine("Install antivirus software and avoid downloading unknown files.");
-                        break;
-
-                    case "privacy":
-                        Console.WriteLine("Never share personal information on unsafe websites.");
-                        break;
-
-                    case "exit":
-                        Console.WriteLine("Goodbye 👋");
-                        return;
-
-                    default:
-                        Console.WriteLine("Unknown command. Type 'help'.");
-                        break;
-                }
-            }
-        }
-
-        private static void ShowHelp()
-        {
-            Console.WriteLine("\nAvailable Commands:");
-            Console.WriteLine("help      - Show commands");
-            Console.WriteLine("password  - Password tips");
-            Console.WriteLine("phishing  - Phishing info");
-            Console.WriteLine("malware   - Malware info");
-            Console.WriteLine("privacy   - Privacy tips");
-            Console.WriteLine("exit      - Exit program\n");
-        }
-    }
-}
->>>>>>> a4b6bca4c01d440131b4c0a66f8dc7259a65f32a

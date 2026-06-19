@@ -131,7 +131,64 @@
                             Background="Pink"
                             Foreground="Black"
                             Click="ScamButton_Click"/>
+                    <Button Content="Add Task"
+                            Width="180"
+                            Height="50"
+                            Margin="5"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="red"
+                            Foreground="Black"
+                            Click="AddTaskButton_Click"/>
 
+                    <Button Content="View Tasks"
+                            Width="180"
+                            Height="50"
+                            Margin="5"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="purple"
+                            Foreground="Black"
+                            Click="ViewTasksButton_Click"/>
+
+                    <Button Content="Delete Task"
+                            Width="180"
+                            Height="50"
+                            Margin="5"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="yellow"
+                            Foreground="Black"
+                            Click="DeleteTaskButton_Click"/>
+
+                    <Button Content="Complete Task"
+                            Width="180"
+                            Height="50"
+                            Margin="5"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="green"
+                            Foreground="Black"
+                            Click="CompleteTaskButton_Click"/>
+
+                    <Button Content="Activity Log"
+                            Width="180"
+                            Height="50"
+                            Margin="5"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="white"
+                            Foreground="Black"
+                            Click="ActivityLogButton_Click"/>
+                    <Button Content="Start Quiz"
+                            Width="180"
+                            Height="50"
+                            Margin="5"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Background="gray"
+                            Foreground="Black"
+                            Click="StartQuizButton_Click"/>
                 </WrapPanel>
 
                 <!-- INPUT -->

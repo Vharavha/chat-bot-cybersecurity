@@ -1,10 +1,7 @@
 using System;
 using System.IO;
 using System.Media;
-<<<<<<< HEAD
-=======
 using System.Speech.Synthesis;
->>>>>>> a4b6bca4c01d440131b4c0a66f8dc7259a65f32a
 
 namespace CyberSecurityBot
 {
@@ -12,7 +9,9 @@ namespace CyberSecurityBot
     {
         public static void PlayGreeting()
         {
-<<<<<<< HEAD
+            string message = "Hello! Welcome to the Cybersecurity Awareness Bot.";
+
+            // Try to play WAV from Assets
             try
             {
                 string path = Path.Combine(
@@ -21,23 +20,6 @@ namespace CyberSecurityBot
                     "greeting.wav"
                 );
 
-                SoundPlayer player = new SoundPlayer(path);
-
-                player.Play();
-            }
-            catch
-            {
-            }
-        }
-    }
-}
-=======
-            string message = "Hello! Welcome to the Cybersecurity Awareness Bot.";
-
-            // 🔊 Play WAV if exists
-            try
-            {
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "greeting.wav");
                 if (File.Exists(path))
                 {
                     using (SoundPlayer player = new SoundPlayer(path))
@@ -51,7 +33,7 @@ namespace CyberSecurityBot
                 Console.WriteLine($"(Audio playback failed: {ex.Message})");
             }
 
-            // 🗣 Text-to-Speech
+            // Text-to-Speech
             try
             {
                 using (SpeechSynthesizer synth = new SpeechSynthesizer())
@@ -69,4 +51,3 @@ namespace CyberSecurityBot
         }
     }
 }
->>>>>>> a4b6bca4c01d440131b4c0a66f8dc7259a65f32a
